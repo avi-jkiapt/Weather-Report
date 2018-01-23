@@ -28,7 +28,7 @@ $(function(){
     $('#currentTemp').html(currentTemp);
     $('#currentWeather').html(currentWeather);
 
-    var apiIcon='http://openweathermap.org/img/w/' + icon +'.png';
+    var apiIcon='https://openweathermap.org/img/w/' + icon +'.png';
     $('#currentTemp').prepend('<img src=' +apiIcon +'>');
 
   }
@@ -45,7 +45,7 @@ $(function(){
     $('#latitude').html(location.latitude);
     $('#longitude').html(location.longitude);
 
-    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat='+location.latitude+'&lon='+location.longitude+'&units=imperial&appid=d99414c365ff0845c676431520203ea0', function(data){
+    $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat='+location.latitude+'&lon='+location.longitude+'&units=imperial&appid=d99414c365ff0845c676431520203ea0', function(data){
 
       apiData=data;
       render(apiData,C);
